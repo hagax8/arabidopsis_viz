@@ -12,16 +12,16 @@ The following python packages are required:
 * pandas
 
 ### Files in directory
-* country_convert.py: Python script, convert country codes to country names
-* worldmap_arabidopsis_admixed.py: Python script, create interactive GTM and t-SNE maps with Admixed groups
-* worldmap_arabidopsis_admixed.py: Python script, create interactive GTM and t-SNE maps with countries 
-* h5_arabidopsis.py: Python script, select filtered genotypes from h5py imputed SNP matrix
-* runGTM.py: run GTM (using ugtm package) or t-SNE (using sklearn)
-* output_viz: directory, output html visualizations of worldmap_arabidopsis_admixed.py and worldmap_arabidopsis_admixed.py
-* data: directory, generated data files 
-* data/1001G_gen.csv: selected pruned genotypes from 1001G Project data (MAF 0.05) 
-* data/1001G_snpids.csv: selected pruned SNPs from 1001G Project data (MAF 0.05)
-* data/dataframe_1001G.csv: 1001G project dataframe with corresponding t-SNE and GTM coordinates 
+* country_convert.py: Python script, converts country codes to country names
+* worldmap_arabidopsis_admixed.py: Python script, creates interactive GTM and t-SNE maps with Admixed groups
+* worldmap_arabidopsis_admixed.py: Python script, creates interactive GTM and t-SNE maps with countries 
+* h5_arabidopsis.py: Python script, selects filtered genotypes from h5py imputed SNP matrix
+* runGTM.py: runs GTM (using ugtm package) or t-SNE (using sklearn)
+* output_viz: directory, contains html visualizations of worldmap_arabidopsis_admixed.py and worldmap_arabidopsis_admixed.py
+* data: directory, contains csv data files 
+* data/1001G_gen.csv: csv file, selected pruned genotypes from 1001G Project data (MAF 0.05) 
+* data/1001G_snpids.csv: csv file, selected pruned SNPs from 1001G Project data (MAF 0.05)
+* data/dataframe_1001G.csv: csv file, 1001G project dataframe with corresponding t-SNE and GTM coordinates 
 
 ### Create plink files from 1001 Genomes Project
 * Download [1001genomes_snp-short-indel_only_ACGTN.vcf.g](https://1001genomes.org/data/GMI-MPI/releases/v3.1/1001genomes_snp-short-indel_only_ACGTN.vcf.gz), the 1135 Arabidopsis thaliana genomes rom the 1001 Genomes Project.
