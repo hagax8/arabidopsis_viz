@@ -61,14 +61,18 @@ python runGTM.py --model GTM --data 1001G_gen.csv \\
 --verbose --prior estimated
 ```
 * t-SNE, output = out_tsne.csv:
+```
 python runGTM.py --model t-SNE \\
 --data 1001G_gen.csv --labels continents.csv --labeltype discrete \\
 --out out --pca --n_components 20 \\
 --random_state 8 --verbose 
+```
 * PCA, output = out_pca.csv:
+```
 python runGTM.py --model PCA --data 1001G_gen.csv \\
 --labels country_groups --labeltype discrete \\
 --out out --pca  --random_state 8
+```
 
 ## Script to convert country codes to country names and continents:
 python country_convert.py the_codes_to_convert
