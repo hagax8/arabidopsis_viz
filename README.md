@@ -27,13 +27,13 @@ The following python packages are required:
 * Download [1001genomes_snp-short-indel_only_ACGTN.vcf.gz](https://1001genomes.org/data/GMI-MPI/releases/v3.1/1001genomes_snp-short-indel_only_ACGTN.vcf.gz), the 1135 Arabidopsis thaliana genomes rom the 1001 Genomes Project.
 * Prune SNPs + apply genotyping rate and MAF filters:
 ```
-plink --snps-only --geno 0.2 \\
---vcf 1001genomes_snp-short-indel_only_ACGTN.vcf.gz \\
+plink --snps-only --geno 0.2 \
+--vcf 1001genomes_snp-short-indel_only_ACGTN.vcf.gz \
 --out 1001G --make-bed
 ```
 ```
-plink --bfile 1001G --indep-pairwise 100 10 0.1 \\
---maf 0.05 --out 1001G_MAF0.05 \\
+plink --bfile 1001G --indep-pairwise 100 10 0.1 \
+--maf 0.05 --out 1001G_MAF0.05 \
 --set-missing-var-ids @:# --make-bed
 ```
 
@@ -52,25 +52,25 @@ python h5_arabidopsis.py
 Our runGTM.py script requires python packages [ugtm](https://github.com/hagax8/ugtm) (GTM implementation) and sklearn (t-SNE implementation).
 * GTM (with "estimated priors" option for imbalanced classes), output = out_gtm_matmeans.csv:
 ```
-python runGTM.py --model GTM --data 1001G_gen.csv \\
---labels countrynames.csv --labeltype discrete \\
---out out_tsne \\
---pca --n_components 20 --grid_size 25 \\
---rbf_grid_size 5 \\
---random_state 8 \\
+python runGTM.py --model GTM --data 1001G_gen.csv \
+--labels countrynames.csv --labeltype discrete \
+--out out_tsne \
+--pca --n_components 20 --grid_size 25 \
+--rbf_grid_size 5 \
+--random_state 8 \
 --verbose --prior estimated
 ```
 * t-SNE, output = out_tsne.csv:
 ```
-python runGTM.py --model t-SNE \\
---data 1001G_gen.csv --labels continents.csv --labeltype discrete \\
---out out --pca --n_components 20 \\
+python runGTM.py --model t-SNE \
+--data 1001G_gen.csv --labels continents.csv --labeltype discrete \
+--out out --pca --n_components 20 \
 --random_state 8 --verbose 
 ```
 * PCA, output = out_pca.csv:
 ```
-python runGTM.py --model PCA --data 1001G_gen.csv \\
---labels country_groups --labeltype discrete \\
+python runGTM.py --model PCA --data 1001G_gen.csv \
+--labels country_groups --labeltype discrete \
 --out out --pca  --random_state 8
 ```
 
