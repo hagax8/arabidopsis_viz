@@ -24,7 +24,7 @@ The following python packages are required:
 * data/dataframe_1001G.csv: csv file, 1001G project dataframe with corresponding t-SNE and GTM coordinates 
 
 ### Create plink files from 1001 Genomes Project
-* Download [1001genomes_snp-short-indel_only_ACGTN.vcf.g](https://1001genomes.org/data/GMI-MPI/releases/v3.1/1001genomes_snp-short-indel_only_ACGTN.vcf.gz), the 1135 Arabidopsis thaliana genomes rom the 1001 Genomes Project.
+* Download [1001genomes_snp-short-indel_only_ACGTN.vcf.gz](https://1001genomes.org/data/GMI-MPI/releases/v3.1/1001genomes_snp-short-indel_only_ACGTN.vcf.gz), the 1135 Arabidopsis thaliana genomes rom the 1001 Genomes Project.
 * Prune SNPs + apply genotyping rate and MAF filters:
 ```
 plink --snps-only --geno 0.2 \\
