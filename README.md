@@ -1,4 +1,4 @@
-## Clustering and Classification of Arabidopsis genomes using t-SNE and GTM (Generative Topographic Mapping)
+## Clustering of Arabidopsis genomes using t-SNE and GTM (Generative Topographic Mapping)
 
 ### Requirements
 The following python packages are required:
