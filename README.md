@@ -24,7 +24,7 @@ The following python packages are required:
 * data/dataframe_1001G.csv: csv file, 1001G project dataframe with corresponding t-SNE and GTM coordinates 
 
 ### Create plink files from 1001 Genomes Project
-* Download [1001genomes_snp-short-indel_only_ACGTN.vcf.gz](https://1001genomes.org/data/GMI-MPI/releases/v3.1/1001genomes_snp-short-indel_only_ACGTN.vcf.gz), the 1135 Arabidopsis thaliana genomes rom the 1001 Genomes Project.
+* Download [1001genomes_snp-short-indel_only_ACGTN.vcf.gz](https://1001genomes.org/data/GMI-MPI/releases/v3.1/1001genomes_snp-short-indel_only_ACGTN.vcf.gz), the 1135 Arabidopsis thaliana genomes from the 1001 Genomes Project.
 * Prune SNPs + apply genotyping rate and MAF filters:
 ```
 plink --snps-only --geno 0.2 \
@@ -38,7 +38,7 @@ plink --bfile 1001G --indep-pairwise 100 10 0.1 \
 ```
 
 ## Create csv file for pruned SNPs: 
-* Download the imputed SNP matrix (h5py file) from the 1001 Genomes Project [1001genomes_snp-short-indel_only_ACGTN.vcf.gz](https://1001genomes.org/data/GMI-MPI/releases/v3.1/SNP_matrix_imputed_hdf5/1001_SNP_MATRIX.tar.gz)  
+* Download the imputed SNP matrix (h5py file) from the 1001 Genomes Project [1001_SNP_MATRIX.tar.gz](https://1001genomes.org/data/GMI-MPI/releases/v3.1/SNP_matrix_imputed_hdf5/1001_SNP_MATRIX.tar.gz)  
 * Python script to generate csv from pruned SNPs and the SNP matrix:
 ```
 python h5_arabidopsis.py
